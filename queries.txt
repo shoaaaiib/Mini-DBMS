@@ -1,0 +1,28 @@
+help create table ;
+help drop table ; //help for command 
+help tables ; //show tables
+
+create table abc ( id number , name varchar , age number) ;
+
+desc abc ; //describe table
+
+insert into abc values ( 1 , "shoaib" , 21 ) ;
+insert into abc values ( 2 , "devarshi" , 21 ) ;
+insert into abc values ( 3 , "sanskruti" , 21 ) ;
+insert into abc values ( 4 , "aayusha" , 21 ) ;
+insert into abc values ( 5 , 21 ) ; //insufficient values
+insert into abc values ( "xyz" , 6 , 21 ) ; //type mismatch
+
+select * from abc where id = 1 ; // all columns
+select name from abc where id = 1 ;
+select fname from abc where id = 1 ; //attribute error
+select name from abc where ib = 1 ;  //conditional attribute error
+
+
+update abc set age = 22 ; //update all rows
+update abc set name = "xyz" where id = 4 ;
+update abc set fname = "xyz" where id = 1 ; //attribute error
+update abc set name = "xyz" where ib = 1 ; //conditional attribute error
+
+delete from abc where id = 1 ; //condition delete
+delete from abc ; //all rows delete
